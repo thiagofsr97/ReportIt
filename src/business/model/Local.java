@@ -8,9 +8,9 @@ public class Local {
 
     Local(int CEP){
         this.CEP = CEP;
-        this.latitude = 'Get From Google API';
-        this.longitude = 'Get From Google API';
-        this.adddress = 'Get From Google API';
+        this.latitude = "Get From Google API";
+        this.longitude = "Get From Google API";
+        this.adddress = "Get From Google API";
     }
 
 

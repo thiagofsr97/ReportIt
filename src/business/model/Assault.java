@@ -1,6 +1,6 @@
 package business.model;
 
-public class Assault implements OccorenceType {
+public class Assault implements OccurrenceType {
     private String name;
     Assault(){
         this.name = "Assault";

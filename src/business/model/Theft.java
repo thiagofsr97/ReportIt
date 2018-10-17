@@ -1,6 +1,6 @@
 package business.model;
 
-public class Theft implements OccorenceType
+public class Theft implements OccurrenceType
 {
     private String name;
     Theft(){
