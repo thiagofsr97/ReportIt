@@ -55,14 +55,16 @@ public class OccurrenceManager {
     public void insertOcurrence(Occurrence occurrence){
         this.occurrences.add(occurrence);
     }
-    
+
     public Occurrence getOccurrence(int id){
         return findOccurence(id);
     }
 
-    public void ListOccurencesById(){
-        for (Occurrence occurrence: this.occurrences) {
+    public void ListOccurencesById() {
+        for (Occurrence occurrence : this.occurrences) {
             System.out.println("Occurence ID: " + occurrence.getId() + " Description:" + occurrence.getDescription());
+
         }
     }
+
 }
