@@ -9,9 +9,10 @@ public class Occurrence {
 
     private String description;
     private DateTime dateTime;
-    private List<String> lostItems;
+    private List<LostItem> lostItems;
     private Local local;
     private OccurrenceType occurrenceType;
+    private static int idCount = 0;
     private int id;
 
 
@@ -21,6 +22,7 @@ public class Occurrence {
         this.local = local;
         this.lostItems = new ArrayList<>();
         this.occurrenceType = occurenceType;
+        this.id = idCount++;
 
     }
 
@@ -41,19 +43,20 @@ public class Occurrence {
     }
 
 
-    public List<String> getLostItems() {
+    public List<LostItem> getLostItems() {
         return lostItems;
     }
 
-    public void addLostItem(String lostItem) {
+    public void addLostItem(LostItem lostItem) {
         this.lostItems.add(lostItem);
     }
+    public void setLostItems(List<LostItem> lostItems){this.lostItems = lostItems;}
 
     public OccurrenceType getOccorenceType() {
         return this.occurrenceType;
     }
 
-    public void setOccorenceType(OccurrenceType occurrenceType) {
+    public void setOccurrenceType(OccurrenceType occurrenceType) {
         this.occurrenceType = occurrenceType;
     }
 
@@ -71,10 +74,6 @@ public class Occurrence {
     
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
 }
