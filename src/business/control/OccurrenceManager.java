@@ -19,7 +19,7 @@ public class OccurrenceManager {
         
     }
     
-    public Occurrence getOcorrencia(){
+    public static Occurrence getOcorrencia(int id){
         // mudar
         return null;
     }
