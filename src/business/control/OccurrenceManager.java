@@ -12,9 +12,24 @@ import java.util.List;
 public class OccurrenceManager {
     
     private List<Occurrence> occurrences;
+    private static OccurrenceManager occurrenceManager = null;
 
-    OccurrenceManager(){
+    private OccurrenceManager(){
         this.occurrences = new ArrayList<>();
+    }
+
+
+    /*
+    *
+    * Applying Singleton Design Pattern
+    *
+     */
+    public static OccurrenceManager getInstance(){
+        if(occurrenceManager == null){
+            occurrenceManager = new OccurrenceManager();
+        }
+
+        return occurrenceManager;
     }
 
     private Occurrence findOccurence(int id){
