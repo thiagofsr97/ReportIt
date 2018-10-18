@@ -8,6 +8,7 @@ public class User implements Comparable, Serializable {
     private final String login;
     private final String password;
     private final DateTime birthday;
+    private static int idCount = 0;
     private int id;
     private int cpf;
     
@@ -15,6 +16,7 @@ public class User implements Comparable, Serializable {
         this.login = login;
         this.password = password;
         this.birthday = birthday;
+        this.id = idCount++;
     }
     
     public String getlogin(){
@@ -30,10 +32,6 @@ public class User implements Comparable, Serializable {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getCpf() {
