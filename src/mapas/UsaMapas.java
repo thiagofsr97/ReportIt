@@ -5,8 +5,9 @@
  */
 package mapas;
 
+import business.model.User;
+
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -19,7 +20,7 @@ public class UsaMapas {
     public static void main(String args[]){
         
         //Adding users to hashmap
-        Map<String,Usuario> usersMap = new HashMap<>();
+        Map<String, User> usersMap = new HashMap<>();
         UsersHandler.addUser(usersMap, "neymar", "10", new DateTime(24,12,97));
         UsersHandler.addUser(usersMap, "huck", "7", new DateTime(23,11,94));
         UsersHandler.addUser(usersMap, "cassio", "12",new DateTime(23,11,94));
@@ -34,7 +35,7 @@ public class UsaMapas {
         System.out.println("------------------------------------");
         
         //Adding same users to TreeMap using putAll
-        Map<String, Usuario> usersTreeMap = new TreeMap<>();
+        Map<String, User> usersTreeMap = new TreeMap<>();
         usersTreeMap.putAll(usersMap);
         
         System.out.println("TreeMap: ");

@@ -7,7 +7,7 @@ public class Assault implements OccurrenceType {
 
     }
     @Override
-    public String getOccorenceName() {
+    public String getOccurrenceName() {
         return this.name;
     }
 }

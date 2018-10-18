@@ -1,9 +1,8 @@
-package business.control;
+package business.model;
 
 import mapas.DateTime;
-import mapas.Usuario;
 
-public class RegisteredUser extends Usuario{
+public class RegisteredUser extends User {
     
     public RegisteredUser(String login, String password, DateTime birthday) {
         super(login, password, birthday);

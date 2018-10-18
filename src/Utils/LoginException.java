@@ -1,6 +1,6 @@
 package Utils;
 
-import mapas.Usuario;
+import business.model.User;
 
 public class LoginException extends Exception {
     
@@ -8,8 +8,8 @@ public class LoginException extends Exception {
         super(erro);
     }
     
-    public LoginException(Usuario usuario, String error){
-        super("[Usuario: " + usuario.getlogin() + "] - [Error]: " + error);
+    public LoginException(User user, String error){
+        super("[User: " + user.getlogin() + "] - [Error]: " + error);
     }
     
 }

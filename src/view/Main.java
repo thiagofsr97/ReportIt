@@ -5,8 +5,9 @@ import Utils.PasswordException;
 import Utils.PersistenceException;
 import business.control.UserControl;
 import java.util.Scanner;
+
+import business.model.User;
 import mapas.DateTime;
-import mapas.Usuario;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class Main {
                     String senha = s.nextLine();
                     
                     try {
-                        uc.add(new Usuario(login, senha, new DateTime(10, 10, 10)));
+                        uc.add(new User(login, senha, new DateTime(10, 10, 10)));
 
                     } catch (LoginException | PasswordException ex) {
                         System.out.println(ex.getMessage());

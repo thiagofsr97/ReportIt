@@ -7,7 +7,7 @@ public class Theft implements OccurrenceType
         this.name = "Theft";
     }
     @Override
-    public String getOccorenceName() {
+    public String getOccurrenceName() {
         return this.name;
     }
 }

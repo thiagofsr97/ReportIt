@@ -5,6 +5,8 @@
  */
 package mapas;
 
+import business.model.User;
+
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -15,18 +17,18 @@ import java.util.TreeSet;
 public class TestComparator{  
     
     public static void main(String[] args) {
-        Set<Usuario> firstUserSet;
-        Set<Usuario> secondUserSet;
+        Set<User> firstUserSet;
+        Set<User> secondUserSet;
         
         //Adding users to Set to be compared by name
-        firstUserSet = new TreeSet<Usuario>(new NameComparator());
-        firstUserSet.add(new Usuario("Edson Filho", "123", new DateTime(25,10,94)));
-        firstUserSet.add(new Usuario("Edson Filho", "1234", new DateTime(25,8,94)));
-        firstUserSet.add(new Usuario("Thiago Pai", "123", new DateTime(23,8,94)));
-        firstUserSet.add(new Usuario("Joao Neto", "123", new DateTime(25,10,95)));
+        firstUserSet = new TreeSet<User>(new NameComparator());
+        firstUserSet.add(new User("Edson Filho", "123", new DateTime(25,10,94)));
+        firstUserSet.add(new User("Edson Filho", "1234", new DateTime(25,8,94)));
+        firstUserSet.add(new User("Thiago Pai", "123", new DateTime(23,8,94)));
+        firstUserSet.add(new User("Joao Neto", "123", new DateTime(25,10,95)));
         
         //Adding users to Set to be compared by birthday
-        secondUserSet = new TreeSet<Usuario>(new BirthdayComparator());
+        secondUserSet = new TreeSet<User>(new BirthdayComparator());
         secondUserSet.addAll(firstUserSet);
         
         System.out.println("Sorted by NameComparator: ");

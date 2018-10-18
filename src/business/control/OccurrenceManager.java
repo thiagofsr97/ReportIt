@@ -1,9 +1,9 @@
-package mapas;
+package business.control;
 
 import business.model.Occurrence;
 import java.util.List;
 
-public class GerenciaOcorrencia {
+public class OccurrenceManager {
     
     List<Occurrence> occurrences;
     

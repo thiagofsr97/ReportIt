@@ -1,11 +1,9 @@
-package business.control;
+package business.model;
 
-import business.model.Occurrence;
 import mapas.DateTime;
-import mapas.Usuario;
 
 
-public class Administrator extends Usuario{
+public class Administrator extends User {
     
     private Occurrence manageOccurrence;
 

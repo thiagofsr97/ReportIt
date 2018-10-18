@@ -11,16 +11,16 @@ public class Occurrence {
     private DateTime dateTime;
     private List<String> lostItems;
     private Local local;
-    private OccurrenceType occorenceType;
+    private OccurrenceType occurrenceType;
     private int id;
 
 
-    Occurrence(String description, DateTime dateTime, Local local, OccurrenceType occorenceType){
+    Occurrence(String description, DateTime dateTime, Local local, OccurrenceType occurenceType){
         this.description = description;
         this.dateTime = dateTime;
         this.local = local;
         this.lostItems = new ArrayList<>();
-        this.occorenceType = occorenceType;
+        this.occurrenceType = occurenceType;
 
     }
 
@@ -50,11 +50,11 @@ public class Occurrence {
     }
 
     public OccurrenceType getOccorenceType() {
-        return occorenceType;
+        return this.occurrenceType;
     }
 
-    public void setOccorenceType(OccurrenceType occorenceType) {
-        this.occorenceType = occorenceType;
+    public void setOccorenceType(OccurrenceType occurrenceType) {
+        this.occurrenceType = occurrenceType;
     }
 
     public void clearItems(){

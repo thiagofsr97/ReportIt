@@ -5,15 +5,17 @@
  */
 package mapas;
 
+import business.model.User;
+
 import java.util.Comparator;
 
 /**
  *
  * @author aluno
  */
-public class BirthdayComparator implements Comparator<Usuario> {
+public class BirthdayComparator implements Comparator<User> {
 
-    public int compare(Usuario o1, Usuario o2) {
+    public int compare(User o1, User o2) {
         if(o1.getBirthday().getYear() > o2.getBirthday().getYear())
             return 1;
         else if(o1.getBirthday().getYear() < o2.getBirthday().getYear())
