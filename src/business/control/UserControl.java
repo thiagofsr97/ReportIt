@@ -12,7 +12,7 @@ public class UserControl {
     
     HashMap<String, User> _user;
     FilePersistence _up;
-    String _path = "src\\view\\teste.ser";
+    String _path = "src\\databasefiles\\teste.ser";
 
     UserControl() throws PersistenceException {
         this._up = new FilePersistence(this._path);
