@@ -18,7 +18,6 @@ public class OccurrenceManager {
         this.occurrences = new ArrayList<>();
     }
 
-
     /*
     *
     * Applying Singleton Design Pattern

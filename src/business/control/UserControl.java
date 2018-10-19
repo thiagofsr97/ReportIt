@@ -14,7 +14,7 @@ public class UserControl {
     FilePersistence _up;
     String _path = "src\\databasefiles\\teste.ser";
 
-    UserControl() throws PersistenceException {
+    public UserControl() throws PersistenceException {
         this._up = new FilePersistence(this._path);
         this._user = this._up.loadFromDatabase();
     }
