@@ -5,7 +5,7 @@
  */
 package mapas;
 
-import business.model.User;
+import business.model.users.User;
 
 import java.util.Iterator;
 import java.util.Map;

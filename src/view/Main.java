@@ -3,10 +3,10 @@ package view;
 import Utils.LoginException;
 import Utils.PasswordException;
 import Utils.PersistenceException;
-import business.control.UserControl;
+import business.control.users.UserControl;
 import java.util.Scanner;
 
-import business.model.User;
+import business.model.users.User;
 import mapas.DateTime;
 
 public class Main {

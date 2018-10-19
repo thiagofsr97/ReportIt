@@ -1,6 +1,6 @@
 package Utils;
 
-import business.model.User;
+import business.model.users.User;
 
 public class LoginException extends Exception {
     
