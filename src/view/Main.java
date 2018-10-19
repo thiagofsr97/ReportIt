@@ -13,17 +13,15 @@ public class Main {
     public static void main(String[] args) {
         
         Scanner s = new Scanner(System.in);
-        UserControl uc = new UserControl();
+        UserControl uc = null;
         int opc;
         
         try{
-            uc.checkFile();
+            uc = new UserControl();
         }catch(PersistenceException pe){
             System.out.println(pe.getMessage());
             System.exit(0);
         }
-         
-        
         
         while(true){
             UserForm.menu();
@@ -54,7 +52,13 @@ public class Main {
                     break;
                 default:
                     UserForm.saving();
-                    uc.close();
+            
+                    try {
+                        uc.close();
+                    } catch (PersistenceException ex) {
+                        System.out.println(ex.getMessage());
+                    }
+            
                     UserForm.exit();
                     return;
             }
