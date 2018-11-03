@@ -1,0 +1,5 @@
+Adapter  => business.control.authentication
+Memento  => business.control.users
+Command  => business.control.users
+Factory  => business.model.occurrences
+Template => business.control.reports

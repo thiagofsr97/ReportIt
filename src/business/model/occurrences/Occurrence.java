@@ -44,7 +44,6 @@ public class Occurrence {
         this.dateTime = dateTime;
     }
 
-
     public List<LostItem> getLostItems() {
         return lostItems;
     }

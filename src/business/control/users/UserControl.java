@@ -10,8 +10,8 @@ import mapas.UsersHandler;
 
 public class UserControl {
     
-    HashMap<String, User> _user;
-    MementoCareTaker memento;
+    private static HashMap<String, User> _user;
+    protected static MementoCareTaker memento;
     FilePersistence _up;
     String _path = "src\\databasefiles\\teste.ser";
 
@@ -22,27 +22,19 @@ public class UserControl {
         memento.addMemento(new UserMemento(_user));
     }
     
-    public void add(User user) throws LoginException, PasswordException{
-        
-        validaUsuario(user);
+    public static void addMemento(){
         memento.addMemento(new UserMemento(_user));
-        _user.put(user.getlogin(), user);
-        
+    }
+    
+    public void executarAcao(User user, Command command) throws LoginException, PasswordException{
+        _user = command.executarAcao(user, _user);
     }
     
     public void undo (){
         _user = memento.getLastSavedState().getSavedState();
     }
     
-    
-    public void removeUser(String login){
-        HashMap<String, User> state = _user;
-        if(UsersHandler.findAndRemove(_user, login)){
-            memento.addMemento(new UserMemento(state));
-        }
-    }
-    
-    private static void validaUsuario(User user) throws LoginException, PasswordException{
+    public static void validaUsuario(User user) throws LoginException, PasswordException{
         validaLogin(user, user.getlogin());
         validaSenha(user, user.getPassword());
     }
