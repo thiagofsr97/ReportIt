@@ -15,10 +15,10 @@ public class Occurrence {
     private Local local;
     private OccurrenceType occurrenceType;
     private static int idCount = 0;
-    private int id;
+    private final int id;
 
 
-    Occurrence(String description, DateTime dateTime, Local local, OccurrenceType occurenceType){
+    public Occurrence(String description, DateTime dateTime, Local local, OccurrenceType occurenceType){
         this.description = description;
         this.dateTime = dateTime;
         this.local = local;

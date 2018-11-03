@@ -34,11 +34,13 @@ public class UsersHandler {
         }
     }
     
-     public static void findAndRemove(Map usersMap, String login){
+     public static boolean findAndRemove(Map usersMap, String login){
         if(usersMap.containsKey(login)){
             usersMap.remove(login);
+            return true;
         }else{
             System.out.println("Usuário não encontrado.");
+            return false;
         }
     }
     
