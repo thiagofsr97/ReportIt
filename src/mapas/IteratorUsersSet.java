@@ -1,32 +1,23 @@
 
 public class IteratorUsersSet implements IteratorInterface {
 
-    protected Set<User> usersSet;
-    protected int count;
+    protected Iterator<User> it;
+    protected User currentUser;
 
     protected IteratorUsersSet(Set<User> usersSet) {
-        this.usersSet = usersSet;
-        count = 0;
-    }
-
-    public void first() {
-        count = 0;
+        this.it = usersSet.iterator();
     }
 
     public void next() {
-        count++;
+        if (isDone())
+            currentUser = it.next();
     }
 
     public boolean isDone() {
-        return count == usersSet.size();
+        return it.hasNext();
     }
 
     public User currentItem() {
-        if (isDone()) {
-            count = usersSet.size() - 1;
-        } else if (count < 0) {
-            count = 0;
-        }
-        return usersSet.get(count);
+        return currentUser;
     }
 }

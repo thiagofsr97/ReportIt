@@ -43,22 +43,14 @@ public class UsersHandler {
             return false;
         }
     }
-    
-    public static void printOutUsers(Map usersMap){
-        
-        Iterator<Map.Entry<Integer, User>> it = usersMap.entrySet().iterator();
-        while(it.hasNext()){
-            User user = it.next().getValue();
-            System.out.println("User: " + user.getlogin() + " Senha: " + user.getPassword() + " Nascimento: " + user.getBirthday().toString());
-            
+
+    public static void printOutUsers(IteratorInterface user){
+
+        while(user.isDone()){
+            user.next();
+            System.out.println("User: " + user.currentItem.getlogin() + " Senha: " + user.currentItem.getPassword() + " Nascimento: " + user.currentItem.getBirthday().toString());
+
         }
     }
-    public static void printOutUsers(Set<User> usersSet){
-        for(User user: usersSet){
-            System.out.println("User: " + user.getlogin() + " Senha: " + user.getPassword() + " Nascimento: " + user.getBirthday().toString());
-        }        
-    }
-    
-   
-    
+
 }

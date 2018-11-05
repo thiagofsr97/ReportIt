@@ -1,6 +1,5 @@
 
 public interface IteratorInterface {
-    void first();
 
     void next();
 
