@@ -5,3 +5,4 @@ Factory  => business.model.occurrences
 Template => business.control.reports
 Flyweight => business.model.visualization
 Iterator => mapas
+State  => business.control.validationcpf
