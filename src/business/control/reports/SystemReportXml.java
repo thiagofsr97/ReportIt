@@ -1,7 +1,7 @@
 
 package business.control.reports;
 
-public class SystemReportXml extends SystemReport{
+public class SystemReportXml extends TemplateSystemReport{
 
     @Override
     protected void reportSystemFileType() {

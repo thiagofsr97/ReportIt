@@ -1,6 +1,6 @@
 package business.control.reports;
 
-public class ReportXml extends Report{
+public class ReportXml extends TemplateReport{
     
     @Override
     protected void reportFileType(){
