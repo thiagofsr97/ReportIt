@@ -1,8 +1,8 @@
-public class StartVerification {
+public class Verification {
     protected CpfVerification state;
     protected int[] digits;
 
-    public StartVerification(int[] digits) {
+    public Verification(int[] digits) {
         state = new FirstTest(digits);
         this.digits = digits;
     }
