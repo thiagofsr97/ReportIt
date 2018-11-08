@@ -3,3 +3,5 @@ Memento  => business.control.users
 Command  => business.control.users
 Factory  => business.model.occurrences
 Template => business.control.reports
+Flyweight => business.model.visualization
+Iterator => mapas
